@@ -1,0 +1,5 @@
+SMART_Wire	KEYWORD1
+train	KEYWORD2
+activate	KEYWORD2
+currentFor	KEYWORD2
+timeFor		KEYWORD2
