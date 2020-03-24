@@ -1,12 +1,25 @@
+/*
+  SMART_Wire.cpp - Library for controlling Shape Memory Alloy Wires using resistance tracking methods. 
+  Created by Timothy Lobiak, March 10, 2020.
+  Released into the public domain.
+*/
+
+/*
+
+TASKS:
+- rMin and rMax validation
+- Study why resistance changes at cool state
+- How does resistance change upon overheating? Does it increase a lot?
+*/
+
 #include "Arduino.h"
 #include "DPM_8600.h"
 #include "SMART_Wire.h"
 
-SMART_Wire::SMART_Wire(float wireResistance, float recommendedCurrent, float resistanceDropThreshold, float X, float Y) : Rth(resistanceDropThreshold), _rC(recommendedCurrent), _errorNum(1)
+SMART_Wire::SMART_Wire(float wireResistance, float recommendedCurrent, float resistanceDropThreshold, float X, float Y) : R(wireResistance), Rth(resistanceDropThreshold), _rC(recommendedCurrent), _errorNum(1)
 {
     coeff[0] = X;
     coeff[1] = Y;
-    R = wireResistance;
 }
 
 const float SMART_Wire::_rMin = 1.5;
@@ -30,9 +43,9 @@ int SMART_Wire::train(DPM_8600 &converter)
     // Step 2. Check if resistance threshold is given, otherwise, measure it if recommended current is given. If none are given, use a default value.
     if (Rth == 0 && _rC != 0) {
         Rth = measureResistanceDrop();
-        Rth = 0.5 * Rth; // At 50% of the original drop we should be fairly confident that the resistance drop is not just an error. The actual number might change, and can't be relied on
+        Rth = 0.5 * Rth; // At 50% of the original drop we should be fairly confident that the resistance drop is not just an error.
     } else {
-        Rth = 0.07; // Works for most cases so far
+        Rth = 0.07; // Works for most observed cases
     }
 
     if (_errorNum != 1) {
@@ -57,6 +70,21 @@ int SMART_Wire::activate(float t)
     return (success) ? 1 : (int)_errorNum;
 }
 
+int SMART_Wire::apply(float c, float t)
+{
+    float v = (R == 0) ? 60 : (c*R*1.25);
+
+    _errorNum = _converter->writeVC(v, c);
+    if (_errorNum != 1) {
+        return _errorNum;
+    }
+    _converter->power(true);
+    delay(floor(t*1000));
+    _converter->power(false);
+
+    return _errorNum;
+}
+
 float SMART_Wire::currentFor(float t)
 {
     return sqrt((coeff[0] / t) + coeff[1]);
@@ -64,14 +92,14 @@ float SMART_Wire::currentFor(float t)
 
 float SMART_Wire::timeFor(float c)
 {
-    return (coeff[0]/(sq(c)-coeff[1]));
+    return (coeff[0] / (sq(c) - coeff[1]));
 }
 
 /// PRIVATE: 
 
 bool SMART_Wire::activateWith(float c, float &t) 
 {
-    float v = R * c * 1.2; // Multiplying by 1.2 to get voltage over what current could be, ensuring that it is CC.
+    float v = R * c * 1.25; // Multiplying by 1.25 to get voltage over what current could be, ensuring that it is CC.
     _errorNum = _converter->writeVC(v, c);
 
     if (_errorNum != 1) {
@@ -111,7 +139,7 @@ bool SMART_Wire::activateWith(float c, float &t)
     // Turn on the power
     _converter->power(true);
   
-    delay(500);
+    delay(600);
   
     // Measure voltage
     v = _converter->read('v');
@@ -133,7 +161,7 @@ bool SMART_Wire::activateWith(float c, float &t)
             started = true;
         }
 
-        // Step 4. If started calculate slope and change state.
+        // Step 3. If started calculate slope and change state.
         if (started) {
             slope = 1 - (r/rOld);
             if (slope > 0.005) {
@@ -150,81 +178,86 @@ bool SMART_Wire::activateWith(float c, float &t)
             }
         }
 
-        // Step 5. If the count reached a certain value exit the loop. The value is set for 5, that means that the loop would finish after 10*35 = 0.35s of no change
+        // Step 4. If the count reached a certain value exit the loop. The value is set for 10, that means that the loop would finish after 10*35 = 0.35s of no change
         if (count >= 10) {
             finished = true;
         }
 
-        // Step 6. Ensure that rinit gets the max value, and the drop is counted from that value.
+        // Step 5. Ensure that rinit gets the max value, and the drop is counted from that value.
         if (r > rinit) {
             rinit = r;
         }
 
-        // Step 7. Update previous resistance value
+        // Step 6. Update previous resistance value
         rOld = r;
 
-        // Step 8. Delay so that the loop doesn't run so fast
+        // Step 7. Delay so that the loop doesn't run so fast
         delay(35);
     }
   
-  // Turn off the power
-  _converter->power(false);
+    // Turn off the power
+    _converter->power(false);
 
-  if (finished) {
-    t = (float)(millis()-timeStamp) / 1000.0;
-    return true;
-  } else {
-    return false;
-  }
+    if (finished) {
+        t = (float)(millis()-timeStamp) / 1000.0;
+        return true;
+    } else {
+        return false;
+    }
 }
 
-bool SMART_Wire::measureCoefficients(float &x, float &y) 
+void SMART_Wire::measureCoefficients(float &x, float &y) 
 {
-  float c = 0.2; // Starting current for tests
-  float deltaT[2];
-  float cVal[2];
-  uint8_t successfulTestCount = 0;
+    // Setting intial current to either recommendedCurrent if it is available or 200mA to start with.
+    float c = (_rC == 0) ? 0.2 : _rC;
+    float deltaT[2];
+    float cVal[2];
+    uint8_t successfulTestCount = 0;
 
-  while (successfulTestCount < 2) {
+    while (successfulTestCount < 2) {
 
-    float t = 10;
-    bool success = activateWith(c, t);
+        float t = 10;
+        bool success = activateWith(c, t);
 
-    if (success) {
-        cVal[successfulTestCount] = c;
-        deltaT[successfulTestCount] = t;
-        c += (c*0.05 >= 0.04) ? c*0.05 : 0.04; // 5% increment with minimum of 0.04A
-        successfulTestCount++;
-    } else {
-        c += (c*0.1 >= 0.1) ? c*0.1 : 0.1; // 10% increment, with minimum of 0.1A
+        if (success) {
+            cVal[successfulTestCount] = c;
+            deltaT[successfulTestCount] = t;
+            c += (c*0.05 > 0.04) ? c*0.05 : 0.04; // 5% increment with minimum of 0.04A
+            successfulTestCount++;
+        } else {
+            c += (c*0.1 > 0.1) ? c*0.1 : 0.1; // 10% increment, with minimum of 0.1A
+        }
+
+        if (_errorNum != 1) {
+            break;
+        }
+
+        if (c >= 5) {
+            _errorNum = -30;
+            break;
+        }
+        
+        delay((success ? 60000 : 40000)); // 1 min to cool down if success,  40 seconds otherwise
     }
 
     if (_errorNum != 1) {
-        break;
+        return ;
     }
 
-    if (c >= 5) {
-      _errorNum = -30;
-      break;
-    }
+    // Calculating constants I^2 = X/t + Y
+    x = (sq(cVal[0]) - sq(cVal[1])) / ((1 / deltaT[0]) - (1 / deltaT[1]));
+    y = sq(cVal[0]) - (y / deltaT[0]);
+
     
-    delay((success ? 60000 : 40000)); // 1 min to cool down if success,  40 seconds otherwise
-  }
+    // If x <= 0 there is certainly an error in measurements as it would mean less current needed for shorter time
 
-  if (_errorNum != 1) {
-    return false;
-  }
+    if (x <= 0) {
+        _errorNum = -34;
+    }
 
-  // Calculating constants I^2 = X/t + Y
-  x = (sq(cVal[0]) - sq(cVal[1])) / ((1 / deltaT[0]) - (1 / deltaT[1]));
-  y = sq(cVal[0]) - (y / deltaT[0]);
-
-  // CREATE BOUNDARIES FOR X and check for them
-  
-  return true;
+    return ;
 }
 
-// Finished. Not Checked
 float SMART_Wire::measureResistanceQuick()
 {
     _converter->power(true);
@@ -236,7 +269,6 @@ float SMART_Wire::measureResistanceQuick()
     return v/c;
 }
 
-// Finished. Not Checked
 float SMART_Wire::measureResistance() 
 {
     _errorNum = _converter->writeVC(5, 0.1);
@@ -312,10 +344,9 @@ float SMART_Wire::measureResistance()
     return r;
 }
 
-// Finished. Not Checked
 float SMART_Wire::measureResistanceDrop()
 {
-    float v = _rC * R * 1.3;
+    float v = _rC * R * 1.25;
 
     _errorNum = _converter->writeVC(v, _rC);
 
@@ -334,7 +365,7 @@ float SMART_Wire::measureResistanceDrop()
     r = v/_rC;
     
      if (v < 0) {
-        _errorNum = floor(v);
+        _errorNum = v;
         _converter->power(false);
         return _errorNum;
     }
