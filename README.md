@@ -1,5 +1,4 @@
 # SMART_Wire
-Shape Memory Alloy Resistance Tracking library for Arduino, which currently uses DPM8600 series power converter to activate NiTi-based wires 
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -48,12 +47,12 @@ Shape Memory Alloy Resistance Tracking library for Arduino, which currently uses
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Built With](#built-with)
-  * [Built For](#built-for)
+  * [Vision](#vision)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
+* [Community Examples](#community-examples)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -65,65 +64,53 @@ Shape Memory Alloy Resistance Tracking library for Arduino, which currently uses
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+Shape Memory Alloy Resistance Tracking library for Arduino, which currently uses DPM8600 series power converter to activate NiTi-based wires. This library was made for individuals without strong technical background or experience in Shape Memory materials. The system is made to be versatile and straightforward enough to accomadate many of hobbyists' projects.
 
-Shape Memory Alloy Resistance Tracking library for Arduino, which currently uses DPM8600 series power converter to activate NiTi-based wires 
+### Vision
 
-### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
-### Built For
-Arduino
+This library is used for quick and easy prototypes for those who are generally unfamiliar with how to work with NiTi-based alloys and how to activate them electronically. This project also serves an educational purpose to make Shape Memory Wires more commonly used among electronics beginners, as well as place to collect information about such wires, including Nitinol, Flexinol and BioMetal and other. 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get started you need to have the equipment and libraries described below.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
+* Requires DPM8605, DPM8608 or any other DPM8600 series **TTL** (not RS-485) power converter.
+* [DPM_8600 power converter](https://github.com/Lotiq/DPM_8600) library to be installed.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-```sh
-git clone https://github.com/your_username_/Project-Name.git
-```
-3. Install NPM packages
-```sh
-npm install
-```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
-```
+1. Clone or Download the repo
+    - If downloaded, open the compressed file into a folder
+2. Insert the folder into the main Arduino/libraries folder
+3. Add DPM_8600 and SMART_Wire libraries into your project
 
+<!-- ### Quick Setup
+
+Here I want to link a video of a 5 min setup. -->
+
+
+## Usage
+
+Using Shape Memory wires could be very easy if you are familiar with both fabrication and library tools. Links below collect and summarise important information in a few 
+
+* Full documentation of the library's functions
+* Fabrication tutorials and tips & tricks
+* Useful information on NiTi-based alloys and what to know before you buy
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Community Examples
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
+Please contact me if you wish to add to add your project to the list
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
+See the [open issues](https://github.com/Lotiq/SMART_Wire/issues) for a list of proposed features (and known issues).
 
 
 <!-- CONTRIBUTING -->
@@ -149,25 +136,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Timothy Lobiak - [linked-in](http://linkedin.com/in/timothy-lobiak-045792151) - timothylobiak@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+<!-- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
+* [Best README Template](https://github.com/othneildrew/Best-README-Template)
 
 
 
@@ -175,16 +152,15 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Lotiq/SMART_Wire.svg?style=flat-square
+[contributors-url]: https://github.com/Lotiq/SMART_Wire/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Lotiq/SMART_Wire.svg?style=flat-square
+[forks-url]: https://github.com/Lotiq/SMART_Wire/network/members
+[stars-shield]: https://img.shields.io/github/stars/Lotiq/SMART_Wire.svg?style=flat-square
+[stars-url]: https://github.com/Lotiq/SMART_Wire/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Lotiq/SMART_Wire.svg?style=flat-square
+[issues-url]: https://github.com/Lotiq/SMART_Wire/issues
+[license-shield]: https://img.shields.io/github/license/Lotiq/SMART_Wire.svg?style=flat-square
+[license-url]: https://github.com/Lotiq/SMART_Wire/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://www.linkedin.com/in/timothy-lobiak-045792151
