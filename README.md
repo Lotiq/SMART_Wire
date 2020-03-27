@@ -64,16 +64,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Shape Memory Alloy Resistance Tracking library for Arduino, which currently uses DPM8600 series power converter to activate NiTi-based wires. This library was made for individuals without strong technical background or experience in Shape Memory materials. The system is made to be versatile and straightforward enough to accomadate many of hobbyists' projects.
+Shape Memory Alloy Resistance Tracking (S.M.A.R.T) library for Arduino, which currently uses DPM8600 series power converter to activate NiTi-based wires. This library was made for individuals without strong technical background or experience with Shape Memory materials. The system is made to be versatile and straightforward enough to accomadate many of hobbyists' projects.
 
 ### Vision
 
-This library is used for quick and easy prototypes for those who are generally unfamiliar with how to work with NiTi-based alloys and how to activate them electronically. This project also serves an educational purpose to make Shape Memory Wires more commonly used among electronics beginners, as well as place to collect information about such wires, including Nitinol, Flexinol and BioMetal and other. 
+This library is used for quick and easy prototypes for those who are generally unfamiliar with how to work with NiTi-based alloys and how to activate them electronically. This project also serves an educational purpose to make Shape Memory Wires more commonly used among electronics beginners, as well as a place to collect information about such wires, including Nitinol, Flexinol and BioMetal and other. 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get started you need to have the equipment and libraries described below.
+To get started you need to have the equipment and a library described below.
 
 ### Prerequisites
 
@@ -88,16 +88,15 @@ To get started you need to have the equipment and libraries described below.
 3. Add DPM_8600 and SMART_Wire libraries into your project
 
 <!-- ### Quick Setup
-
 Here I want to link a video of a 5 min setup. -->
 
 
 ## Usage
 
-Using Shape Memory wires could be very easy if you are familiar with both fabrication and library tools. Links below collect and summarise important information in a few 
+Using Shape Memory wires could be very easy if you are familiar with both fabrication and library tools. Links below collect and summarise important information in a few key topics.
 
 * Full documentation of the library's functions
-* Fabrication tutorials and tips & tricks
+* Fabrication tutorials and tips & tricks on making your own pieces.
 * Useful information on NiTi-based alloys and what to know before you buy
 
 
