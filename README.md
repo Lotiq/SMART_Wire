@@ -1,43 +1,35 @@
 # SMART_Wire
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
-
-***[![Contributors][contributors-shield]][contributors-url]
-***[![Forks][forks-shield]][forks-url]
-***[![Stargazers][stars-shield]][stars-url]
-***[![Issues][issues-shield]][issues-url]
-***[![MIT License][license-shield]][license-url]
-***[![LinkedIn][linkedin-shield]][linkedin-url]
--->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 <!-- PROJECT LOGO -->
 <!--
 ***<br />
 ***<p align="center">
-***  <a href="https://github.com/othneildrew/Best-README-Template">
+***  <a href="https://github.com/Lotiq/SMART_Wire">
 ***    <img src="images/logo.png" alt="Logo" width="80" height="80">
 ***  </a>
 ***
-***  <h3 align="center">Best-README-Template</h3>
+***  <h3 align="center">SMART_Wire</h3>
 ***
 ***  <p align="center">
-***   An awesome README template to jumpstart your projects!
+***   An awesome README  to jumpstart your projects!
 ***    <br />
-***    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+***    <a href="https://github.com/Lotiq/SMART_Wire"><strong>Explore the docs »</strong></a>
 ***    <br />
 ***    <br />
-***    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+***    <a href="https://github.com/Lotiq/SMART_Wire">View Demo</a>
 ***    ·
-***    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+***    <a href="https://github.com/Lotiq/SMART_Wire/issues">Report Bug</a>
 ***    ·
-***    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+***    <a href="https://github.com/Lotiq/SMART_Wire/issues">Request Feature</a>
 ***  </p>
 ***</p>
 -->
@@ -47,6 +39,7 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+  * [Applications and Capabilities](#applications-and-capabilities)
   * [Vision](#vision)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
@@ -64,11 +57,19 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Shape Memory Alloy Resistance Tracking (S.M.A.R.T) library for Arduino, which currently uses DPM8600 series power converter to activate NiTi-based wires. This library was made for individuals without strong technical background or experience with Shape Memory materials. The system is made to be versatile and straightforward enough to accomadate many of hobbyists' projects.
+Shape Memory Alloy Resistance Tracking (S.M.A.R.T) library for Arduino, which currently uses DPM8600 series power converter to activate NiTi-based wires. This library was made for individuals without an extensive technical background or experience with Shape Memory materials. This library is made to be versatile and straightforward enough to accomadate many of hobbyists' projects. Additionally, information on the wires, applications and fabrication techniques for SMA-based projects are given below.
+
+
+### Applications and Capabilities
+
+This library can be used for quick and easy prototypes for those who are generally unfamiliar with NiTi-based alloys and how to activate them electronically (see [Community Examples](##community-examples)). It is capable of estimating current versus time relationship for wire activation in a given environment. Theoretically, this library can work with different wire brands (including, but not limited to Flexinol, Nitinol and BioMetal) of different shapes, length and thicknesses as long as their behaviour is similar to NiTi-based wires. The library relies on and iteratively studies the resistance changes because of the phase transformations (Austenite <-> Martensite), which it uses for estimating the relationship between time and constant current. This library is **not** precise or advanced enough to be used in commercial sector in its current form, however it is being constantly improved. 
+
+The set of functions given in this library can control wires contraction generally within the range of 1 to 10 seconds. Other functions for more control over the wire are work in progress. The library currently uses DPM8600 series power converter as a controllable current source and ease of use, however this could change in the future.
 
 ### Vision
 
-This library is used for quick and easy prototypes for those who are generally unfamiliar with how to work with NiTi-based alloys and how to activate them electronically. This project also serves an educational purpose to make Shape Memory Wires more commonly used among electronics beginners, as well as a place to collect information about such wires, including Nitinol, Flexinol and BioMetal and other. 
+The goal of this project is to create a set of tools (information, breakout boards, electronic setups, libraries etc.) that would be simple and accessible enough for beginners to start using various NiTi wires in their projects, without having to learn much about how those wires work.
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -95,7 +96,7 @@ Here I want to link a video of a 5 min setup. -->
 
 Using Shape Memory wires could be very easy if you are familiar with both fabrication and library tools. Links below collect and summarise important information in a few key topics.
 
-* Full documentation of the library's functions
+* [Full documentation](https://github.com/Lotiq/SMART_Wire/blob/master/SMART_Wire.h) of the library's functions and video tutorials explaining how to use it
 * Fabrication tutorials and tips & tricks on making your own pieces.
 * Useful information on NiTi-based alloys and what to know before you buy
 
@@ -137,9 +138,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Timothy Lobiak - [linked-in](http://linkedin.com/in/timothy-lobiak-045792151) - timothylobiak@gmail.com
 
-<!-- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
-
-
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
@@ -150,7 +148,6 @@ Timothy Lobiak - [linked-in](http://linkedin.com/in/timothy-lobiak-045792151) - 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/Lotiq/SMART_Wire.svg?style=flat-square
 [contributors-url]: https://github.com/Lotiq/SMART_Wire/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Lotiq/SMART_Wire.svg?style=flat-square

@@ -23,7 +23,7 @@ SMART_Wire::SMART_Wire(float wireResistance, float recommendedCurrent, float res
 }
 
 const float SMART_Wire::_rMin = 1.5;
-const float SMART_Wire::_rMax = 50;
+const float SMART_Wire::_rMax = 60;
 
 /// PUBLIC: 
 

@@ -73,7 +73,6 @@ class SMART_Wire
 
     // Future functions:
     // activateAndHold
-    // apply
     // ADD options for training with init = measured or first measured.
 
     float R;
