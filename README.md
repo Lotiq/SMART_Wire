@@ -97,8 +97,8 @@ Here I want to link a video of a 5 min setup. -->
 Using Shape Memory wires could be very easy if you are familiar with both fabrication and library tools. Links below collect and summarise important information in a few key topics.
 
 * [Full documentation](https://github.com/Lotiq/SMART_Wire/blob/master/SMART_Wire.h) of the library's functions and video tutorials explaining how to use it
-* Fabrication tutorials and tips & tricks on making your own pieces.
-* [Useful information](https://github.com/Lotiq/SMART_Wire/blob/master/information/Useful_Info.md) on NiTi-based alloys and what to know before you buy
+* [Useful information](https://github.com/Lotiq/SMART_Wire/blob/master/information/usefulinfo.md) on NiTi-based alloys and what to know before you buy
+* [Fabrication tips & tricks](https://github.com/Lotiq/SMART_Wire/blob/master/information/fabrication.md) on making your own pieces.
 
 
 <!-- USAGE EXAMPLES -->

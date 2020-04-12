@@ -7,7 +7,6 @@
 /*
 
 TASKS:
-- rMin and rMax validation
 - Study why resistance changes at cool state
 - How does resistance change upon overheating? Does it increase a lot?
 */
@@ -22,7 +21,7 @@ SMART_Wire::SMART_Wire(float wireResistance, float recommendedCurrent, float res
     coeff[1] = Y;
 }
 
-const float SMART_Wire::_rMin = 1.5;
+const float SMART_Wire::_rMin = 2; // The accuracy below this threshold is not great. Please make sure that the relative resistance of the electric wire connected to SMA compared to the resistance of the whole piece is less than 20%. 
 const float SMART_Wire::_rMax = 60;
 
 /// PUBLIC: 
@@ -45,7 +44,7 @@ int SMART_Wire::train(DPM_8600 &converter)
         Rth = measureResistanceDrop();
         Rth = 0.5 * Rth; // At 50% of the original drop we should be fairly confident that the resistance drop is not just an error.
     } else {
-        Rth = 0.07; // Works for most observed cases
+        Rth = 0.07; // Half of average difference between martensitic and austentenitic resistances of 
     }
 
     if (_errorNum != 1) {
@@ -208,8 +207,8 @@ bool SMART_Wire::activateWith(float c, float &t)
 
 void SMART_Wire::measureCoefficients(float &x, float &y) 
 {
-    // Setting intial current to either recommendedCurrent if it is available or 200mA to start with.
-    float c = (_rC == 0) ? 0.2 : _rC;
+    // Setting intial current to either recommendedCurrent if it is available or 100mA to start with.
+    float c = (_rC == 0) ? 0.1 : _rC;
     float deltaT[2];
     float cVal[2];
     uint8_t successfulTestCount = 0;

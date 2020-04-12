@@ -93,7 +93,7 @@ class SMART_Wire
     float measureResistance();
     float measureResistanceQuick();
     float measureResistanceDrop();
-    bool measureCoefficients(float &x, float &y);
+    void measureCoefficients(float &x, float &y);
     bool activateWith(float c, float &t);
 };
 

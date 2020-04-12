@@ -59,6 +59,8 @@ Although training could be performed with a help of blowtorch and plyers, the un
 
 For most beginner projects 0.008" or 0.005" Flexinol wires would be sufficient. Both of those wire thicknesses have decent pulling properties, while at the same time having good resistivity for most power supplies to be relatively easily be activated over a length of 5-100cm. Additionally, those wires are not super thin, so crimping wouldn't be as difficult as with thinner wires. As for crimping, you would probably want to get different crimps, ideally only slightly bigger than both the SM wire and regular electric wire to crimp them together. The topic of crimping and everthing else related to fabrication is covered more thoroughly in fabrication page.
 
+Additionally, in case you need a custom piece or train wire to certain specification and would like to outsource the work I would recommend contacting [Kellogg Research Labs](https://www.kelloggsresearchlabs.com). I am not affiliated with Kellogg Research Labs but stayed in close touch and used their services for some of my tests.
+
 The final remark is that I would recommend against training of wires before you get comfortable enough understanding all the key concepts. 
 
 ## Resources
