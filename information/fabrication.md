@@ -54,7 +54,7 @@ There are also other  methods that are **not ideal** for electrically connecting
 
 Crimping is a common way to electrically connect shape memory wire to a plain electrical wire. Crimping beads come in many shapes and sizes (including some of the ones I use on the image below)
 
-![Crimping Bead Examples Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/crimps.jpeg)
+![Crimping Bead Examples Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/crimps.jpg)
 
 Crimping can be very effective when done correctly. The best practice is to loop back the wire through the crimp to ensure good connection. Additionally, it is recommended to use an electrical wire which is of similar diameter to a shape memory wire, or at least comparable, because it would be harder to crimp thin and thick wires together. Although you can find different advice on crimping, these are my tips:
 
@@ -112,13 +112,13 @@ In this section I will be giving examples of various work and motions done using
 
 ### Transparent Leaf
 
-![Transparent Leaf Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/transparent_leaf.jpeg)
+![Transparent Leaf Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/transparent_leaf.jpg)
 
 This is one of the first and most proud of prototypes that I've made with [0.008" HT](https://www.robotshop.com/en/dynalloy-flexinol-008-ht-actuator-wire.html) Flexinol wire and a piece of transparent plastic that has great heat dissipation. The wire was hand-stitched to the material, which took quite a bit of time and I would normally recommend sewing machine instead. Flexinol was connected to a regular electric wire using a foldable crimp and solder. This type of crimps also have a hole which allowed for the needle to come through and sewed to the plastic, therefore taking very little space and being very sturdy. A video of the actuation is presented [here](https://vimeo.com/394957325). The wire was pre-tensioned quite well so that the range of movement is substantial.
 
 ### Curling Tongue
 
-![Curling Tongue Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/curling_tongue.jpeg)
+![Curling Tongue Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/curling_tongue.jpg)
 
 This was of the first pieces that I made and was meant to be a quick functional prototype. The base material was cardboard, which turned out to be too rigid for the size. I also used what I recommended against - copper tape. This being said however, I still crimped the wire and soldered the crimp to the tape. I used looping back of the crimp which gives a sturdier connection. The original video can be found [here](https://vimeo.com/393475111).
 
