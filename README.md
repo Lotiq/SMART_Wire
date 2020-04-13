@@ -44,6 +44,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
+  * [Quick Start](#quick-start)
 * [Usage](#usage)
 * [Community Examples](#community-examples)
 * [Roadmap](#roadmap)
@@ -57,14 +58,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Shape Memory Alloy Resistance Tracking (S.M.A.R.T) library for Arduino, which currently uses DPM8600 series power converter to activate NiTi-based wires. This library was made for individuals without an extensive technical background or experience with Shape Memory materials. This library is made to be versatile and straightforward enough to accomadate many of hobbyists' projects. Additionally, information on the wires, applications and fabrication techniques for SMA-based projects are given below.
+Shape Memory Alloy Resistance Tracking (S.M.A.R.T.) library for Arduino, which currently uses DPM8600 series power converter to activate NiTi-based wires. This library was made for individuals without an extensive technical background or experience with Shape Memory materials. This library is made to be versatile and straightforward enough to accomadate many of hobbyists' projects. Additionally, information on the wires, applications and fabrication techniques for SMA-based projects are given below.
 
 
 ### Applications and Capabilities
 
 This library can be used for quick and easy prototypes for those who are generally unfamiliar with NiTi-based alloys and how to activate them electronically (see [Community Examples](##community-examples)). It is capable of estimating current versus time relationship for wire activation in a given environment. Theoretically, this library can work with different wire brands (including, but not limited to Flexinol, Nitinol and BioMetal) of different shapes, length and thicknesses as long as their behaviour is similar to NiTi-based wires. The library relies on and iteratively studies the resistance changes because of the phase transformations (Austenite <-> Martensite), which it uses for estimating the relationship between time and constant current. This library is **not** precise or advanced enough to be used in commercial sector in its current form, however it is being constantly improved. 
 
-The set of functions given in this library can control wires contraction generally within the range of 1 to 10 seconds. Other functions for more control over the wire are work in progress. The library currently uses DPM8600 series power converter as a controllable current source and ease of use, however this could change in the future.
+The set of functions given in this library can control wire (2-60 Ohm) contraction generally within the range of 1 to 10 seconds. Other functions for more control over the wire are work in progress. The library currently uses DPM8600 series power converter as a controllable current source and ease of use, however this could change in the future.
 
 ### Vision
 
@@ -78,7 +79,7 @@ To get started you need to have the equipment and a library described below.
 
 ### Prerequisites
 
-* Requires DPM8605, DPM8608 or any other DPM8600 series **TTL** (not RS-485) power converter.
+* Requires DPM8605, DPM8608 or any other DPM8600 series **TTL** (not RS-485) power converter. Connect Arduino serial to the power converter.
 * [DPM_8600 power converter](https://github.com/Lotiq/DPM_8600) library to be installed.
 
 ### Installation
@@ -88,15 +89,15 @@ To get started you need to have the equipment and a library described below.
 2. Insert the folder into the main Arduino/libraries folder
 3. Add DPM_8600 and SMART_Wire libraries into your project
 
-<!-- ### Quick Setup
-Here I want to link a video of a 5 min setup. -->
+### Quick Setup
+Here I want to link a [video](https://vimeo.com/407255823/9682c160d5) of a 4 min quick guide of how to get started with the library. This video is work in progress and will be regularly updated
 
 
 ## Usage
 
 Using Shape Memory wires could be very easy if you are familiar with both fabrication and library tools. Links below collect and summarise important information in a few key topics.
 
-* [Full documentation](https://github.com/Lotiq/SMART_Wire/blob/master/SMART_Wire.h) of the library's functions and video tutorials explaining how to use it
+* [Full documentation](https://github.com/Lotiq/SMART_Wire/blob/master/SMART_Wire.h) of the library's functions
 * [Useful information](https://github.com/Lotiq/SMART_Wire/blob/master/information/usefulinfo.md) on NiTi-based alloys and what to know before you buy
 * [Fabrication tips & tricks](https://github.com/Lotiq/SMART_Wire/blob/master/information/fabrication.md) on making your own pieces.
 
@@ -104,7 +105,7 @@ Using Shape Memory wires could be very easy if you are familiar with both fabric
 <!-- USAGE EXAMPLES -->
 ## Community Examples
 
-Please contact me if you wish to add to add your project to the list
+Please contact me if you wish to add to add your S.M.A.R.T. Wire project to the list
 
 
 <!-- ROADMAP -->
@@ -142,6 +143,7 @@ Timothy Lobiak - [linked-in](http://linkedin.com/in/timothy-lobiak-045792151) - 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [Best README Template](https://github.com/othneildrew/Best-README-Template)
+* [Dequin Sun](https://github.com/DeqingSun)
 
 
 

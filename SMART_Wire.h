@@ -6,24 +6,24 @@
   --------------- METHODS ---------------
 
   - SMART_Wire(wireResistance, recommendedCurrent, resistanceDropThreshold, X, Y) - Constructor. Could be initialized as an empty constructor, thus training would be negligible
-      - wireResistance - if the resistance of the wire is known
-      - recommendedCurrent - if the current that is recommeneded for that wire is known
-      - resistanceDropThreshold - if it is know how much the resistance of the wire changes when being heated.
-      - X, Y - coefficients in the equation of I^2 = (X/time) + Y. Those variables could be provided or estimated.
+      * wireResistance [Ohm] - if the resistance of the wire is known
+      * recommendedCurrent [A] - if the current that is recommeneded for that wire is known
+      * resistanceDropThreshold [%]- if it is know how much the resistance of the wire changes when being heated.
+      * X, Y - coefficients in the equation of I^2 = (X/time) + Y. Those variables could be provided or estimated.
 
   - train(converter) - Training function, which based on the variables provided in constructor finds the necessary parameters for activation. Returns error state
-      - converter - DPM_8600 converter. Over time support for other converter types would be available
+      * converter - DPM_8600 converter. Over time support for other converter types would be available
 
   - apply(c, t) - A direct command to apply certain amount of current for a specific time. Recommeneded to have resistance measured or entered prior to that
-      - c - current that needed to be applied in max
-      - t - time for the current to be applied in seconds.
+      * c [A] - current that needed to be applied in max
+      * t [seconds] - time for the current to be applied in seconds.
 
   - activate(t) - Activation function for the wire to be activated within given time. Returns error state.
-      - t - time for the eire to be activated within.
+      - t [seconds] - time for the wire to be activated within.
   
-  - currentFor(t) - Conversion function which returns a float of the current necessary for the wire to be activated within a certain amount of time
+  - currentFor(t) - Conversion function which returns a float of the current [A] necessary for the wire to be activated within a certain amount of time [seconds]
 
-  - timeFor(c) - Conversion function which returns a float of the time the wire should be activated within under the given current
+  - timeFor(c) - Conversion function which returns a float of the time [seconds] the wire should be activated within under the given current [A]
 
   --------------- PUBLIC PARAMETERS ---------------
 
