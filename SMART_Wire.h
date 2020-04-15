@@ -12,7 +12,7 @@
       * X, Y - coefficients in the equation of I^2 = (X/time) + Y. Those variables could be provided or estimated.
 
   - train(converter) - Training function, which based on the variables provided in constructor finds the necessary parameters for activation. Returns error state
-      * converter - DPM_8600 converter. Over time support for other converter types would be available
+      * converter - DPM8600 converter. Over time support for other converter types would be available
 
   - apply(c, t) - A direct command to apply certain amount of current for a specific time. Recommeneded to have resistance measured or entered prior to that
       * c [A] - current that needed to be applied in max
@@ -58,13 +58,13 @@
 
 #define SMART_Wire_h
 #include "Arduino.h"
-#include "DPM_8600.h"
+#include "DPM8600.h"
 
 class SMART_Wire
 {
   public:
     SMART_Wire(float wireResistance = 0, float recommendedCurrent = 0, float resistanceDropThreshold = 0, float X = 0, float Y = 0);
-    int train(DPM_8600 &converter);
+    int train(DPM8600 &converter);
     int apply(float c, float t);
     int activate(float t);
     float currentFor(float t);
@@ -84,7 +84,7 @@ class SMART_Wire
     float tMax;
 
   private:
-    DPM_8600 *_converter;
+    DPM8600 *_converter;
     float _errorNum;
     float _rC;
     static const float _rMin;

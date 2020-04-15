@@ -80,7 +80,7 @@ To get started you need to have the equipment and a library described below.
 ### Prerequisites
 
 * Requires DPM8605, DPM8608 or any other DPM8600 series **TTL** (not RS-485) power converter. Connect Arduino serial to the power converter.
-* [DPM_8600 power converter](https://github.com/Lotiq/DPM_8600) library to be installed.
+* [DPM8600 power converter](https://github.com/Lotiq/DPM8600) library to be installed.
 
 ### Installation
 

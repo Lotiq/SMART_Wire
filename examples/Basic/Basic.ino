@@ -1,7 +1,7 @@
-#include <DPM_8600.h>
+#include <DPM8600.h>
 #include <SMART_Wire.h>
 
-DPM_8600 converter;
+DPM8600 converter;
 SMART_Wire wire;
 
 void setup() {

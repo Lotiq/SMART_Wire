@@ -12,7 +12,7 @@ TASKS:
 */
 
 #include "Arduino.h"
-#include "DPM_8600.h"
+#include "DPM8600.h"
 #include "SMART_Wire.h"
 
 SMART_Wire::SMART_Wire(float wireResistance, float recommendedCurrent, float resistanceDropThreshold, float X, float Y) : R(wireResistance), Rth(resistanceDropThreshold), _rC(recommendedCurrent), _errorNum(1)
@@ -26,7 +26,7 @@ const float SMART_Wire::_rMax = 60;
 
 /// PUBLIC: 
 
-int SMART_Wire::train(DPM_8600 &converter) 
+int SMART_Wire::train(DPM8600 &converter) 
 {
     _converter = &converter;
 
