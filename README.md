@@ -10,29 +10,29 @@
 
 
 <!-- PROJECT LOGO -->
-<!--
-***<br />
-***<p align="center">
-***  <a href="https://github.com/Lotiq/SMART_Wire">
-***    <img src="images/logo.png" alt="Logo" width="80" height="80">
-***  </a>
-***
-***  <h3 align="center">SMART_Wire</h3>
-***
-***  <p align="center">
-***   An awesome README  to jumpstart your projects!
-***    <br />
-***    <a href="https://github.com/Lotiq/SMART_Wire"><strong>Explore the docs »</strong></a>
-***    <br />
-***    <br />
-***    <a href="https://github.com/Lotiq/SMART_Wire">View Demo</a>
-***    ·
-***    <a href="https://github.com/Lotiq/SMART_Wire/issues">Report Bug</a>
-***    ·
-***    <a href="https://github.com/Lotiq/SMART_Wire/issues">Request Feature</a>
-***  </p>
-***</p>
--->
+
+<br />
+<p align="center">
+  <a href="https://github.com/Lotiq/SMART_Wire">
+    <img src="images/logo.jpg" alt="Logo" width="100" height="100">
+  </a>
+
+  <h3 align="center">SMART_Wire</h3>
+
+  <p align="center">
+   Use Shape Memory wires with ease!
+    <br />
+    <a href="https://github.com/Lotiq/SMART_Wire"><strong>Explore the docs »</strong></a>
+   <br />
+    <br />
+    <a href="https://github.com/Lotiq/SMART_Wire">View Demo</a>
+    ·
+    <a href="https://github.com/Lotiq/SMART_Wire/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Lotiq/SMART_Wire/issues">Request Feature</a>
+  </p>
+</p>
+
 
 
 <!-- TABLE OF CONTENTS -->
@@ -87,7 +87,7 @@ To get started you need to have the equipment and a library described below.
 1. Clone or Download the repo
     - If downloaded, open the compressed file into a folder
 2. Insert the folder into the main Arduino/libraries folder
-3. Add DPM_8600 and SMART_Wire libraries into your project
+3. Add DPM8600 and SMART_Wire libraries into your project
 
 ### Quick Setup
 Here I want to link a [video](https://vimeo.com/407255823/9682c160d5) of a 4 min quick guide of how to get started with the library. This video is work in progress and will be regularly updated
