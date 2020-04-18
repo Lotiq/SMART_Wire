@@ -5,6 +5,7 @@
     * [Terminology](#terminology)
 * [Shape Memory vs Super Elasticity](#shape-memory-vs-super-elasticity)
 * [One Way vs Two Way Memory](#one-way-vs-two-way-memory)
+* [SMAs vs Other Actuators](#smas-vs-other-actuators)
 * [Manufacturers and Confusion](#manufacturers-and-confusion)
 * [Shape Variations](#shape-variations)
 * [Wire Training](#wire-training)
@@ -37,6 +38,26 @@ For the purpose of creative projects and actuation of moving components **super 
 
 There are two main types of Shape Memory wires, the ones that exhibit change only when the High Temperature (HT) transformation phase is reached and the ones that perform motion on both High Temperature and Low Temperature (LT) transformations. For instance, Flexinol, is a Two Way Shape Memory (TWSM) wire, because it contracts when heated to a certain temperature and relaxed and extends when cooled. Most available nitinol, however, comes as One Way Shape Memory (OWSM) where it restores its pre-trained shape upon heating, but doesn't go back when cooled. TWSM is usually more expensive and requires complex manufacturing and training techniques, as well as being more sensitive to overheating and can be damaged. Depending on your application you might want to use either OWSM or TWSM, however something to keep in mind is that OWSM requires some sort of mechanisms to restore it back, as it can only change shape in one direction. On the other hand, some of the One Way wires (most of commercially available Nitinol) can be [trained](#wire-training) to unique shapes.
 
+## SMAs vs Other Actuators
+
+Another imporant topic for discussion is when should and shouldn't use SMAs. quite simply, if you can get away with other actuators such as pulleys, motors or other - I would recommend using them, as SMAs are not as reliable when not used under extremely precise and monitored conditions.
+
+In bullet-point form I would summarize it as such:
+
+You should use SMAs if:
+
+* You are constrained in physical space
+* You want to achieve organic motion
+* You need quiet motion
+
+You also **have to** keep this in mind when using SMAs
+* You are fine with the wire heating the surroundings to high temperatures
+* The wire is electrically ensulated and is not shorting itself
+* It might take time to fabricate the pieces that involve the wires
+
+In **ANY** other situation, I would recommend **against** working with SMAs, and use motors, pulleys or something else.
+
+
 ## Manufacturers and Confusion
 
 There are numerous manufacturers of NiTi SMAs and they don't do a great job explaining the differences of their product to others. Among popular products are Nitinol, Flexinol and BioMetal. Although they all based of NiTi alloy, their characteristics are different because of differences in training and composition. And although some might say they are all the same, this is only partially true, as each of them still has a unique property. Thus, it is important to decide which wires to select for your project. 
@@ -47,13 +68,13 @@ Generally, most hobbyists use Flexinol wires, as they have clear instructions on
 
 There are different shapes and sizes of SMAs. Some of the most common shapes are helical springs and plain straight wires. Other, less known are torsion and flat springs. For beginners I would recommend using helical springs or straight wires, as both are quite common and easy to get.
 
-The diameter of the wire matters a lot. As in most electronics applications such wires are activated through resistive heating and resistance of the wire depends a lot on the thickness, thinner wires being more resistive and usually require higher voltage power supply. Thicker wires, on the other hand have very small resistance, and therefore usually require a lot more current at lower voltage for the same length. Flexinol wires are one of the type which are supplied with a datasheet which includes recommended current.Therefore, they are easier to get started with, although [SMART_Wire library](https://github.com/Lotiq/SMART_Wire) can deduce the required current for any wire.
+The diameter of the wire matters a lot. As in most electronics applications such wires are activated through resistive heating and resistance of the wire depends a lot on the thickness with thinner wires being more resistive and usually requiring higher voltage power supply. Thicker wires, on the other hand have very small resistance, and therefore usually require a lot more current at lower voltage for the same length. Flexinol wires are one of the type which are supplied with a datasheet which includes recommended current.Therefore, they are easier to get started with, although [SMART_Wire library](https://github.com/Lotiq/SMART_Wire) can deduce the required current for almost any NiTi wire.
 
 ## Wire Training
 
-Flexinol wire comes pre-trained and overheating this wire might reduce its SM properties. This is usually true for most TWSM wires - they come pre-trained and are easier to damage by overheating. On the other hand, OWSM wires don't necessarily come pre-trained. In some cases you can get raw Nitinol which doesn't have a particular shape, but rather whatever shape it was extruded in. In some cases you might need to re-train their remembered shape. Most NiTi wires are trained in a 510C (950F) environment (note: **this is not activation temperature**, but rather training temperature which is much higher) and need to be fixed it place, as they would exhibit superelastic property mentioned earlier, when the environment is hotter than the activation temperature. The necessary time for the wire to heat up depends on wire thickness, with thinner wires needing about 30s - 1min and thicker up to 20 mins. After this part is finished, the wire should be quenched (cold water could be used). 
+Flexinol wires come pre-trained and overheating those wires might reduce their SM properties. This is usually true for most TWSM wires - they come pre-trained and are easier to damage by overheating. On the other hand, OWSM wires don't necessarily come pre-trained. In some cases you can get raw Nitinol which doesn't have a particular shape, but rather whatever shape it was extruded in. In some cases you might need to re-train their remembered shape. Most NiTi wires are trained in a 510C (950F) environment (note: **this is not activation temperature**, but rather training temperature which is much higher) and need to be fixed in place while being trained, as they would exhibit superelastic property mentioned earlier and try to change their shape, when the environment is hotter than the activation temperature. The necessary time for the wire to heat up depends on wire thickness, with thinner wires needing about 30s - 1min and thicker ones up to 20 mins. After this part is finished, the wire should be quenched (cold water could be used). 
 
-Although training could be performed with a help of blowtorch and plyers, the uneven heating of the wire can create spot overheating and permanently damage remove SM properties. Small kilns are great option as they provide uniform heating and the temperature could be regulated. In order to fix the wire in place several techniques could be used. First, wire could be casted into [mould of sand and plaster](https://www.youtube.com/watch?v=V9quSyg8oj4&t=1s) that could be dried out and crushed after. Alternatively, a perforated sheet of high temperature resistance material can be used with screws to pin down the wire at required places.
+Although training could be performed with a help of blowtorch and plyers, the uneven heating of the wire can create spot overheating and permanently damage remove SM properties. Small kilns are a great option as they provide uniform heating and the temperature could be regulated. In order to fix the wire in place several techniques could be used. First, wire could be casted into [mould of sand and plaster](https://www.youtube.com/watch?v=V9quSyg8oj4&t=1s) that could be dried out and crushed after. Alternatively, a perforated sheet of high temperature resistance material can be used with screws to pin down the wire at required places.
 
 ## Advice On Projects
 
