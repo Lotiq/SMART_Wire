@@ -59,7 +59,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Shape Memory Alloy Resistance Tracking (S.M.A.R.T.) library for Arduino, which currently uses DPM8600 series power converter to activate NiTi-based wires. This library was made for individuals without an extensive technical background or experience with Shape Memory (SM) materials. This library is made to be versatile and straightforward enough to accomadate many of hobbyists' projects. Additionally, information on the wires, applications and fabrication techniques for SM alloy related projects are given below.
+Shape Memory Alloy Resistance Tracking (S.M.A.R.T.) Wire is a library for Arduino, which uses DPM8600 series power converter to activate NiTi-based wires. This library was made for individuals without an extensive technical background or experience with Shape Memory materials. This library is versatile and straightforward enough to accommodate many of hobbyists' projects. Additionally, this library serves a purpose of collecting and organizing information about fabrication, usage, examples and tips regarding Shape Memory wires in one place.
 
 ### What Are Shape Memory Wires
 
@@ -152,6 +152,7 @@ Timothy Lobiak - [linked-in](http://linkedin.com/in/timothy-lobiak-045792151) - 
 ## Acknowledgements
 * [Best README Template](https://github.com/othneildrew/Best-README-Template)
 * [Dequin Sun](https://github.com/DeqingSun)
+* [Zhuoxian (RG) Zhou](https://www.linkedin.com/in/zhuoxian-r-g-zhou-a26926163/)
 
 
 
