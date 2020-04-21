@@ -55,7 +55,7 @@ There are also other  methods that are **not ideal** for electrically connecting
 
 Crimping is a common way to electrically connect shape memory wire to a plain electrical wire. Crimping beads come in many shapes and sizes (including some of the ones I use on the image below)
 
-![Crimping Bead Examples Image](images/crimps.jpg)
+![Crimping Bead Examples Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/crimps.jpg)
 
 Crimping can be very effective when done correctly. The best practice is to loop back the wire through the crimp to ensure good connection. Additionally, it is recommended to use an electrical wire which is of similar diameter to a shape memory wire, or at least comparable, because it would be harder to crimp thin and thick wires together. Although you can find different advice on crimping, these are my tips:
 
@@ -118,7 +118,7 @@ Here in this step-by-step tutorial I will present and example of how you might w
 
 Get a piece of fabric and weave the wire through the material and test it
 
-![Spring Wire Test](images/spring_test.jpg)
+![Spring Wire Test](https://github.com/Lotiq/SMART_Wire/blob/master/images/spring_test.jpg)
 
 Here I overstreched a piece of wire to see how much can I stretch it before it loses its properties, so I know the approximate length I should work with. When working with straight wires you are less likely see much change, so you can omit this step, especially if you know wire properties already.
 
@@ -130,7 +130,7 @@ In this case I simply had to weave the wire through the fabric. In general, I re
 
 Although this step can be reversed with Step 1 which might be easier for straight Flexinol wires, I couldn't do it with a spring. For electrical connection I went with soldering a small thin solid wire with 24 AWG stranded wire. This way I could then crimp the thin wire with the spring like so:
 
-![Crimping Spring](images/crimping_spring)
+![Crimping Spring](https://github.com/Lotiq/SMART_Wire/blob/master/images/crimping_spring)
 
 Note that I haven't used any solder in this example, as the connection seemed to be quite solid even without it.
 
@@ -146,18 +146,18 @@ In this section I will be giving examples of various work and motions done using
 
 ### Transparent Leaf
 
-![Transparent Leaf Image](images/transparent_leaf.jpg)
+![Transparent Leaf Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/transparent_leaf.jpg)
 
 This is one of the first and most proud of prototypes that I've made with [0.008" HT](https://www.robotshop.com/en/dynalloy-flexinol-008-ht-actuator-wire.html) Flexinol wire and a piece of transparent plastic that has great heat dissipation. The wire was hand-stitched to the material, which took quite a bit of time and I would normally recommend sewing machine instead. Flexinol was connected to a regular electric wire using a foldable crimp and solder. This type of crimps also have a hole which allowed for the needle to come through and sewed to the plastic, therefore taking very little space and being very sturdy. A video of the actuation is presented [here](https://vimeo.com/394957325). The wire was pre-tensioned quite well so that the range of movement is substantial.
 
 ### Folding Fabric
-![Folding Fabric Image](images/folding_fabric.jpg)
+![Folding Fabric Image](https://github.com/Lotiq/SMART_Wire/blob/master/images//folding_fabric.jpg)
 
 This was the latest prototype in which I wanted to experiment with SM springs. In this case I was using some proprietary wire, which didn't have any documentation, but had a Two Way Shape Memory, and extended quite a bit upon cooling. In your project, you could use any Flexinol wire instead. I have woven the wire into a piece of fabric, which turned out to be quite a challenge, as the wire would resist being rotated and it damaged quite a bit of wire because of overstreching. That being said, for future tests I would recommend crimping pieces together instead of trying to weave one piece through the fabric. Additionally, for this example I soldered thin wires to a regular 24AWG stranded wire which made the piece very flexible, while at the same time making it very easy to crimp with super tiny crimps without using any solder on them! Although I couldn't achieve a nice pattern as in [this example](#fabric-smocking), I was quite happy with what I achieved with the limited resources available. Here is a [video](https://vimeo.com/409905256) of actuation.
 
 ### Curling Tongue
 
-![Curling Tongue Image](images/curling_tongue.jpg)
+![Curling Tongue Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/curling_tongue.jpg)
 
 This was of the first pieces that I made and was meant to be a quick functional prototype. The base material was cardboard, which turned out to be too rigid for the size. I also used what I recommended against - copper tape. This being said however, I still crimped the wire and soldered the crimp to the tape. I used looping back of the crimp which gives a sturdier connection. The original video can be found [here](https://vimeo.com/393475111).
 
