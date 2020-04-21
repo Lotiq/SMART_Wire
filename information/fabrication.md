@@ -13,6 +13,7 @@
     * [Sewing](#sewing)
     * [Pre-tensioning](#pre-tensioning)
     * [Silicon Encasing](#silicon-encasing)
+    * [Overuse and Stretching](#overuse-and-stretching)
 * [Step-By-Step Guide](#step-by-step-guide)
 * [Examples](#examples)
 * [Resources](#resources)
@@ -54,13 +55,16 @@ There are also other  methods that are **not ideal** for electrically connecting
 
 Crimping is a common way to electrically connect shape memory wire to a plain electrical wire. Crimping beads come in many shapes and sizes (including some of the ones I use on the image below)
 
-![Crimping Bead Examples Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/crimps.jpg)
+![Crimping Bead Examples Image](images/crimps.jpg)
 
 Crimping can be very effective when done correctly. The best practice is to loop back the wire through the crimp to ensure good connection. Additionally, it is recommended to use an electrical wire which is of similar diameter to a shape memory wire, or at least comparable, because it would be harder to crimp thin and thick wires together. Although you can find different advice on crimping, these are my tips:
 
 * Always make sure that the crimps you use are conductive and don't have coating
 * Crimp using flat plyers as this way you don't damage the crimp
 * Longer crimping beads are better as they provide a line of contact rather than a point, which ensures better connection
+* Try to crimp SM wires with wires which are of comparable thicknesses, as they would be easier to crimp together.
+
+If you want to find a great range of crimping beads in New York, check [Tohoshoji](http://www.tohoshoji-ny.com/hometop.html).
 
 ### Soldering 
 
@@ -102,9 +106,39 @@ To do this you need to heat the wire electrically. I would highly recommend agai
 
 Something you may want to do and something I generally was interested is encasing the whole piece in silicon. This could be done, although there are some rules you should follow. First, if you use stitches, it is vital that silicon doesn't attach to stitches so putting a thin layer of paper ot taping the stiches before encasing in silicon would give the wire a room to move. Additionally, when encasing in silicon you have to account for its added rigidity and to get a noticable contraction it is important that the piece contracts quite a bit even before silicon encasing.
 
+### Overuse and Stretching
+
+An important thing to keep in mind when working with SM wires is that although they have this SM property, they are not completely impossible to damage. By overstreching springs or bending into sharp corners regular straight SM wires you are most likely to **eliminate** SM property of that part altogether. 
+
 ## Step-By-Step Guide
 
-Here in this step-by-step tutorial I will present and example of how you might want to make your own NiTi piece. I am using XXX Flexinol in this example
+Here in this step-by-step tutorial I will present and example of how you might want to make your own NiTi piece. I am using a Nitinol spring that has Two-Way memory, however any flexinol piece would be equally great:
+
+### Step 0: Test your wire
+
+Get a piece of fabric and weave the wire through the material and test it
+
+![Spring Wire Test](images/spring_test.jpg)
+
+Here I overstreched a piece of wire to see how much can I stretch it before it loses its properties, so I know the approximate length I should work with. When working with straight wires you are less likely see much change, so you can omit this step, especially if you know wire properties already.
+
+### Step 1: Attach to Surface
+
+In this case I simply had to weave the wire through the fabric. In general, I realized that weaving a spring is hard without it twisting on itself or streching (and therefore damaging) the wire. In case of straight muscle wires, they need to be sewed onto the surface so that they stay close to the surface and deform it more when being activated.
+
+### Step 2: Connect to Electrical Wires
+
+Although this step can be reversed with Step 1 which might be easier for straight Flexinol wires, I couldn't do it with a spring. For electrical connection I went with soldering a small thin solid wire with 24 AWG stranded wire. This way I could then crimp the thin wire with the spring like so:
+
+![Crimping Spring](images/crimping_spring)
+
+Note that I haven't used any solder in this example, as the connection seemed to be quite solid even without it.
+
+### Step 3: Testing Connection & Pre-tensioning
+
+The first thing you want to do is test the circuit with a multimeter for quality of the connection. If everything is fine and you are working with straight muscle wires, you might want to pre-tension them before fixing in place. For that you need to activate the wire and put it in tension once it was fully activated. Then, you need to fix the wire in place by either using glue gun or if you have a special crimp with a surface mount you can use that too. 
+
+In case of the spring and fabric, no attaching to the surface is required since the crimp would prevent the wire from slipping.
 
 ## Examples
 
@@ -112,13 +146,18 @@ In this section I will be giving examples of various work and motions done using
 
 ### Transparent Leaf
 
-![Transparent Leaf Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/transparent_leaf.jpg)
+![Transparent Leaf Image](images/transparent_leaf.jpg)
 
 This is one of the first and most proud of prototypes that I've made with [0.008" HT](https://www.robotshop.com/en/dynalloy-flexinol-008-ht-actuator-wire.html) Flexinol wire and a piece of transparent plastic that has great heat dissipation. The wire was hand-stitched to the material, which took quite a bit of time and I would normally recommend sewing machine instead. Flexinol was connected to a regular electric wire using a foldable crimp and solder. This type of crimps also have a hole which allowed for the needle to come through and sewed to the plastic, therefore taking very little space and being very sturdy. A video of the actuation is presented [here](https://vimeo.com/394957325). The wire was pre-tensioned quite well so that the range of movement is substantial.
 
+### Folding Fabric
+![Folding Fabric Image](images/folding_fabric.jpg)
+
+This was the latest prototype in which I wanted to experiment with SM springs. In this case I was using some proprietary wire, which didn't have any documentation, but had a Two Way Shape Memory, and extended quite a bit upon cooling. In your project, you could use any Flexinol wire instead. I have woven the wire into a piece of fabric, which turned out to be quite a challenge, as the wire would resist being rotated and it damaged quite a bit of wire because of overstreching. That being said, for future tests I would recommend crimping pieces together instead of trying to weave one piece through the fabric. Additionally, for this example I soldered thin wires to a regular 24AWG stranded wire which made the piece very flexible, while at the same time making it very easy to crimp with super tiny crimps without using any solder on them! Although I couldn't achieve a nice pattern as in [this example](#fabric-smocking), I was quite happy with what I achieved with the limited resources available. Here is a [video](https://vimeo.com/409905256) of actuation.
+
 ### Curling Tongue
 
-![Curling Tongue Image](https://github.com/Lotiq/SMART_Wire/blob/master/images/curling_tongue.jpg)
+![Curling Tongue Image](images/curling_tongue.jpg)
 
 This was of the first pieces that I made and was meant to be a quick functional prototype. The base material was cardboard, which turned out to be too rigid for the size. I also used what I recommended against - copper tape. This being said however, I still crimped the wire and soldered the crimp to the tape. I used looping back of the crimp which gives a sturdier connection. The original video can be found [here](https://vimeo.com/393475111).
 
@@ -135,8 +174,6 @@ An interesting [example](https://vimeo.com/38043960) of Nitinol use for creating
 ### Fabric Smocking
 
 Fabric smocking is also another interesting motion that can be done with SMAs. This particular [example](https://www.kobakant.at/DIY/?p=5276&fbclid=IwAR1e0WhZvmwoGbv198lMeYgVkWH3aSJB9Q_yohHjpdkoDIMQ3xBr8CIt414) seems to use Nitinol spring that contracts quite a bit creating this nice looking pattern out of fabric. The issue, as can be seen on video, is that there is no mechanism to stretch it back to the original flat shape. 
-
-### Resources
 
 
 
