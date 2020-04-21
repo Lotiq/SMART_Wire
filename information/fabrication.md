@@ -130,7 +130,7 @@ In this case I simply had to weave the wire through the fabric. In general, I re
 
 Although this step can be reversed with Step 1 which might be easier for straight Flexinol wires, I couldn't do it with a spring. For electrical connection I went with soldering a small thin solid wire with 24 AWG stranded wire. This way I could then crimp the thin wire with the spring like so:
 
-![Crimping Spring](https://github.com/Lotiq/SMART_Wire/blob/master/images/crimping_spring)
+![Crimping Spring](https://github.com/Lotiq/SMART_Wire/blob/master/images/crimping_spring.jpg)
 
 Note that I haven't used any solder in this example, as the connection seemed to be quite solid even without it.
 
